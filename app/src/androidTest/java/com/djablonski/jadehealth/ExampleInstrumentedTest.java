@@ -1,4 +1,4 @@
-package com.djablonski.huskiehack2017;
+package com.djablonski.jadehealth;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

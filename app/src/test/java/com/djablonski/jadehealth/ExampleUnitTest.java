@@ -1,4 +1,4 @@
-package com.djablonski.huskiehack2017;
+package com.djablonski.jadehealth;
 
 import org.junit.Test;
 

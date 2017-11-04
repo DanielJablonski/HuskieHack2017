@@ -1,4 +1,4 @@
-package com.djablonski.huskiehack2017;
+package com.djablonski.jadehealth;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

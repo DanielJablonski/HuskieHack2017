@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.djablonski.huskiehack2017">
+    package="com.djablonski.jadehealth">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.djablonski.jadehealth.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,9 +17,9 @@
             </intent-filter>
         </activity>
         
-        <activity android:name=".dataScreen"></activity>
-        <activity android:name=".Tutorial"></activity>
-        <activity android:name=".QuestionnaireActivty"></activity>
+        <activity android:name="com.djablonski.jadehealth.dataScreen"></activity>
+        <activity android:name="com.djablonski.jadehealth.Tutorial"></activity>
+        <activity android:name="com.djablonski.jadehealth.QuestionnaireActivty"></activity>
     </application>
 
 </manifest>
