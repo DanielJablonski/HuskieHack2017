@@ -19,6 +19,7 @@
         
         <activity android:name=".dataScreen"></activity>
         <activity android:name=".Tutorial"></activity>
+        <activity android:name=".QuestionnaireActivty"></activity>
     </application>
 
 </manifest>
