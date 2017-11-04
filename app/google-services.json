@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "171037702128",
+    "firebase_url": "https://jad-health.firebaseio.com",
+    "project_id": "jad-health",
+    "storage_bucket": "jad-health.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171037702128:android:0377f2af78962b3a",
+        "android_client_info": {
+          "package_name": "com.djablonski.jadehealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171037702128-2jtr1j33u0h3gcait5ln01hae5t3h2mq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.djablonski.jadehealth",
+            "certificate_hash": "8d81b6aaac905415f163c666e4d9b3f691d660a0"
+          }
+        },
+        {
+          "client_id": "171037702128-r3lpt3es09uat0vj1ee4r5kg460ir1qm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7e3Il6BBYEER2dzHVfq5wQgD2jj__xCU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171037702128-r3lpt3es09uat0vj1ee4r5kg460ir1qm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
