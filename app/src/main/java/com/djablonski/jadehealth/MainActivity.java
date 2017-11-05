@@ -70,6 +70,15 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         title.setTypeface(typeface);
         tutorialBtn.setTypeface(typeface);
 
+        tutorialBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Tutorial.class);
+                finish();
+                startActivity(intent);
+            }
+        });
+
         googleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
