@@ -37,7 +37,7 @@ public class informationActivity extends AppCompatActivity {
 
         String hum = getIntent().getStringExtra("humidity");
         float humidity = Float.parseFloat(hum);
-        float dangerScore = (userPain *  humidity)*10;
+        float dangerScore = (userPain *  (humidity/100))*10;
 
         if(dangerScore >= 100)
         {
@@ -49,7 +49,7 @@ public class informationActivity extends AppCompatActivity {
         }
         else if (dangerScore >= 15 && dangerScore < 50)
         {
-            recommendation.setText("Due to the relatively high humidity levels we recommend that you we recommend that you apply an ice pack to the painful areas.");
+            recommendation.setText("Due to the relatively high humidity levels we recommend that you apply an ice pack to the painful areas.");
         }
 
         else {

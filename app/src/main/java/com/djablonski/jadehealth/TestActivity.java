@@ -116,7 +116,7 @@ public class TestActivity extends Activity
                 intent.putExtra("painIndex", painIndex.getText().toString());
                 intent.putExtra("humidity", humidity);
                 startActivity(intent);
-                finish();
+
             }
         });
     }
