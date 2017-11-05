@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">JADE Health</string>
+
+    <string name="recommendations_mild">Due to the low humidity and temperature recorded by the device we recommend that you simply massage and stretch the affected area.</string>
+    <string name="recommendations_severe">Due to the relatively high humidity levels we recommend that you we recommend that you apply an ice pack to the painful areas.</string>
+    <string name="recommendations_overkill">Due to the high humidity in the air and the pain you seem to be experiencing we recommend that you take anti-inflammatory pills before going outdoors.</string>
+    <string name="recommendations_thermonuclearwar">Due to the extreme pain you seem to be experiencing we recommend immediate surgery.</string>
 </resources>

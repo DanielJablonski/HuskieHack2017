@@ -16,10 +16,7 @@ import java.util.Locale;
 
 public class dataScreen extends AppCompatActivity {
 
-    private TextView painQuestion;
-    private TextView pulseRateText;
-    private TextView temperatureText;
-    private TextView humidityText;
+    private TextView painQuestion, pulseRateText, temperatureText, humidityText;
     private EditText painInfo;
     private Button moreInfoBtn;
 
@@ -42,6 +39,10 @@ public class dataScreen extends AppCompatActivity {
         pulseRateText.setTypeface(typeface);
         humidityText.setTypeface(typeface);
         temperatureText.setTypeface(typeface);
+
+        String painIn = painInfo.getText().toString();
+
+        int painIndex = Integer.parseInt(painIn);
 
 
 
