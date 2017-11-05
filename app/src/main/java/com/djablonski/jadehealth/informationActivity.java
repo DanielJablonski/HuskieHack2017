@@ -23,7 +23,7 @@ public class informationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tutorial_activity);
+        setContentView(R.layout.information_activity);
 
         logo = findViewById(R.id.imageView);
         recommendation = findViewById(R.id.recommendText);
