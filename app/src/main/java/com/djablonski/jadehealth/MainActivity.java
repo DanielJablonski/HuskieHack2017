@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
                     ref.addListenerForSingleValueEvent(new ValueEventListener() {
                         public void onDataChange(DataSnapshot dataSnapshot) {
-                            if(dataSnapshot.child(FirebaseAuth.getInstance().getUid()) == null) {
+                            if(dataSnapshot.child(FirebaseAuth.getInstance().getUid()).getValue() == null) {
                                 Map<String, Object> map = new HashMap<String, Object>();
                                 map.put("/" + FirebaseAuth.getInstance().getUid() + "/", toMap());
                                 ref.updateChildren(map, new DatabaseReference.CompletionListener() {
@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                                     }
                                 });
                             }
-                            if(dataSnapshot.child(FirebaseAuth.getInstance().getUid()).child("age") == null)
+                            if(dataSnapshot.child(FirebaseAuth.getInstance().getUid()).child("age").getValue() == null)
                             {
                                 Intent intent = new Intent(MainActivity.this, QuestionnaireActivty.class);
                                 startActivity(intent);
