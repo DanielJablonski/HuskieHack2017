@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         tutorialBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Tutorial.class);
+                Intent intent = new Intent(MainActivity.this, TestActivity.class);
                 finish();
                 startActivity(intent);
             }
