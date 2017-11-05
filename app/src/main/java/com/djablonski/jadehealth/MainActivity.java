@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                         }
                     });
 
-                    Intent intent = new Intent(MainActivity.this, Tutorial.class);
+                    Intent intent = new Intent(MainActivity.this, QuestionnaireActivty.class);
                     startActivity(intent);
                     finish();
                 }
