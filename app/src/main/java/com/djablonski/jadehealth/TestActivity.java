@@ -68,6 +68,7 @@ public class TestActivity extends Activity
     private static final String BUTTON_TEXT = "Call Google Sheets API";
     private static final String PREF_ACCOUNT_NAME = "accountName";
     private static final String[] SCOPES = { SheetsScopes.SPREADSHEETS_READONLY };
+    private String humidity;
 
     /**
      * Create the main activity.
@@ -113,6 +114,7 @@ public class TestActivity extends Activity
             public void onClick(View v) {
                 Intent intent = new Intent(TestActivity.this, informationActivity.class);
                 intent.putExtra("painIndex", painIndex.getText().toString());
+                intent.putExtra("humidity", humidity);
                 startActivity(intent);
                 finish();
             }
@@ -397,6 +399,7 @@ public class TestActivity extends Activity
                 string1 = string1.replace("[","");
                 String string2 = parts[1];
                 string2 = string2.replace("]","");
+                humidity = string2;
                 temp.setText("Temperature: " + string1 + "°F");
                 hum.setText("Humidity: " + string2 + "%");
             }
