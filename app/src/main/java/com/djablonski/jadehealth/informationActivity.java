@@ -27,7 +27,7 @@ public class informationActivity extends AppCompatActivity {
 
         logo = findViewById(R.id.imageView);
         recommendation = findViewById(R.id.recommendText);
-        int painIndex = getIntent().getIntExtra("userPain", 0);
+        int painIndex = getIntent().getIntExtra("painIndex", 0);
 
         AssetManager am = informationActivity.this.getApplicationContext().getAssets();
         Typeface typeface = Typeface.createFromAsset(am, String.format(Locale.US, "fonts/%s", "timeburnerbold.ttf"));
@@ -38,7 +38,7 @@ public class informationActivity extends AppCompatActivity {
         {
             recommendation.setText("@string/recommendations_thermonuclearwar");
         }
-        else if (painIndex >= 5 && painIndex <= 9);
+        else if (painIndex >= 5 && painIndex <= 9)
         {
             recommendation.setText("@string/recommendations_overkill");
         }

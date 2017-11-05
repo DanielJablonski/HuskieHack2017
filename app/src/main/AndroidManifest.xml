@@ -20,7 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".dataScreen" />
         <activity android:name=".Tutorial" />
         <activity android:name=".QuestionnaireActivty" />
         <activity android:name=".TestActivity"></activity>
