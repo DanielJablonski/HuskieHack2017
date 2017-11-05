@@ -1,9 +1,11 @@
 package com.djablonski.jadehealth;
 
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -42,7 +44,16 @@ public class dataScreen extends AppCompatActivity {
 
         String painIn = painInfo.getText().toString();
 
-        int painIndex = Integer.parseInt(painIn);
+        final int painIndex = Integer.parseInt(painIn);
+
+        moreInfoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), informationActivity.class);
+                intent.putExtra("userPain", painIndex);
+                startActivity(intent);
+            }
+        });
 
 
 
