@@ -352,7 +352,7 @@ public class TestActivity extends Activity
          */
         private List<String> getDataFromApi() throws IOException {
             String spreadsheetId = "1J8pOiU7HEZdA4yghzHmXkavmvYkdhJtfP8lx2Aela1E";
-            String range = "A2:D";
+            String range = "A2:C";
             List<String> results = new ArrayList<String>();
             ValueRange response = this.mService.spreadsheets().values()
                     .get(spreadsheetId, range)
@@ -360,7 +360,7 @@ public class TestActivity extends Activity
             List<List<Object>> values = response.getValues();
             if (values != null) {
                 for (List row : values) {
-                    results.add(row.get(1) + ", " + row.get(2) + ", " + row.get(3));
+                    results.add(row.get(1) + ", " + row.get(2));
                 }
             }
 

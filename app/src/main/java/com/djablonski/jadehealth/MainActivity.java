@@ -170,17 +170,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 } else {
                     alertWithMessage("Signed In As " + task.getResult().getUser().getDisplayName());
                     ref = FirebaseDatabase.getInstance().getReference().child("users");
-                    Map<String, Object> map = new HashMap<String, Object>();
-                    map.put("/" + FirebaseAuth.getInstance().getUid() + "/", toMap());
-                    ref.updateChildren(map, new DatabaseReference.CompletionListener() {
-                        @Override
-                        public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
 
-                        }
-                    });
                     ref.addListenerForSingleValueEvent(new ValueEventListener() {
                         public void onDataChange(DataSnapshot dataSnapshot) {
-                            if(dataSnapshot == null) {
+                            if(dataSnapshot.child(FirebaseAuth.getInstance().getUid()) == null) {
                                 Map<String, Object> map = new HashMap<String, Object>();
                                 map.put("/" + FirebaseAuth.getInstance().getUid() + "/", toMap());
                                 ref.updateChildren(map, new DatabaseReference.CompletionListener() {
@@ -190,6 +183,18 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                                     }
                                 });
                             }
+                            if(dataSnapshot.child(FirebaseAuth.getInstance().getUid()).child("age") == null)
+                            {
+                                Intent intent = new Intent(MainActivity.this, QuestionnaireActivty.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                            else
+                            {
+                                Intent intent = new Intent(MainActivity.this, TestActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
                         }
 
                         @Override
@@ -198,9 +203,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                         }
                     });
 
-                    Intent intent = new Intent(MainActivity.this, QuestionnaireActivty.class);
-                    startActivity(intent);
-                    finish();
+
                 }
             }
         });

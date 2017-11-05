@@ -1,5 +1,6 @@
 package com.djablonski.jadehealth;
 
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -74,7 +75,9 @@ public class QuestionnaireActivty extends AppCompatActivity {
                 ref.updateChildren(map, new DatabaseReference.CompletionListener() {
                     @Override
                     public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
-
+                        Intent intent = new Intent(QuestionnaireActivty.this, TestActivity.class);
+                        finish();
+                        startActivity(intent);
                     }
                 });
             }
